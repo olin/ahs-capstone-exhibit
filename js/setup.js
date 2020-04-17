@@ -1,6 +1,6 @@
 AFRAME.registerComponent('prox', {
     schema: {
-        message: {type: 'string', default: 'Hello, World!'},
+        message: {type: 'string', default: 'Check out my project!'},
         dist: {type: 'number', default: 1}
     },
 
