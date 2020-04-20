@@ -13,6 +13,16 @@
             </div>
             <div class="Content__wrapper">
                 {{content}}
+                {% for page in site.projects %}
+                    <div class="Project__wrapper">
+                        <div class="Project__title">
+                            <h2>{{page.title}} - {{page.author}}</h2>
+                        </div>
+                        <div class="Project__description">
+                            {{page.description}}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </body>
