@@ -9,6 +9,10 @@
             <div class="Header__wrapper">
                 <div class="Header__inner">
                     <h1 class="Header__title">AHS Capstone</h1>
+                    <img class="Header__image" src="assets/header-icon-04.png" />
+                    <img class="Header__image" src="assets/header-icon-05.png" />
+                    <img class="Header__image" src="assets/header-icon-06.png" />
+                    <img class="Header__image" src="assets/header-icon-07.png" />
                 </div>
             </div>
             <div class="Content__wrapper">
@@ -33,7 +37,7 @@
                             {% else %}
                                 {% assign proj_href = project.hyperlink %}
                             {% endif %}
-                            <a class="Project__link" href={{proj_href}}>Read More</a>
+                            <a class="Project__link" href={{proj_href}} target="_blank">Read More</a>
                         </div>
                     </div>
                 {% endfor %}

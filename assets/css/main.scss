@@ -11,6 +11,24 @@
          url('/assets/fonts/terminal-grotesque-webfont.ttf') format('truetype');
 }
 
+@keyframes slide_in_left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide_in_right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 html, body {
     width: 100%;
     margin: 0;
@@ -36,9 +54,20 @@ h1 {
     margin: 20px 0;
 }
 
+.Header__image {
+    width: 100px;
+    height: 100px;
+}
+
 .Header__inner {
+    display: flex;
+    align-items: center;
     width: 100%;
     margin: 0 30px;
+}
+
+.Header__title {
+    display: inline-block;
 }
 
 .Content__wrapper {
@@ -53,6 +82,7 @@ h1 {
     margin: 15px;
     max-width: 1000px;
     align-self: flex-start;
+    animation: 1s ease-out 0s 1 slide_in_left;
 }
 
 .Project__wrapper__right {
@@ -60,6 +90,7 @@ h1 {
     margin: 15px;
     max-width: 1000px;
     align-self: flex-end;
+    animation: 1s ease-out 0s 1 slide_in_right;
 }
 
 .Project__title {
