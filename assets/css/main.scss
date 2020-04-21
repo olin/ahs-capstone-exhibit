@@ -1,0 +1,95 @@
+---
+---
+
+@font-face {
+    font-family: 'Terminal Grotesque';
+    src: url('/assets/fonts/terminal-grotesque-webfont.eot');
+    src: url('/assets/fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+         url('/assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+         url('/assets/fonts/terminal-grotesque-webfont.woff') format('woff'),
+         url('/assets/fonts/terminal-grotesque-webfont.ttf') format('truetype');
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Terminal Grotesque', Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+.Page__wrapper {
+    width: 100%;
+}
+
+.Header__wrapper {
+    height: 100px;
+    margin: 20px 0;
+}
+
+.Header__inner {
+    width: 100%;
+    margin: 0 30px;
+}
+
+.Content__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 100%;
+}
+
+.Project__wrapper__left {
+    border: 1px solid black;
+    margin: 15px;
+    max-width: 1000px;
+    align-self: flex-start;
+}
+
+.Project__wrapper__right {
+    border: 1px solid black;
+    margin: 15px;
+    max-width: 1000px;
+    align-self: flex-end;
+}
+
+.Project__title {
+    height: 25px;
+    padding: 10px;
+    padding-right: 55px;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.Project__description {
+    padding: 20px 10px;
+}
+
+.Project__button {
+    border-left: 1px solid black;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 45px;
+    width: 45px;
+}
+
+.Project__link {
+    color: black;
+    outline: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+

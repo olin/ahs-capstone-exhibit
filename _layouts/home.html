@@ -14,7 +14,14 @@
             <div class="Content__wrapper">
                 {{content}}
                 {% for project in site.data.projects %}
-                    <div class="Project__wrapper">
+                    {% assign idx = forloop.index | modulo: 2 %}
+                    {% if idx == 1 %}
+                        {% assign wrapper_class = 'Project__wrapper__left' %}
+                    {% else %}
+                        {% assign wrapper_class = 'Project__wrapper__right' %}
+                    {% endif %}
+
+                    <div class={{wrapper_class}}>
                         <div class="Project__title">
                             <h2>{{project.title}} - {{project.author}}</h2>
                             <div class="Project__button">_</div>
