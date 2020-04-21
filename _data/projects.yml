@@ -1,0 +1,17 @@
+- type: page
+  title: Testing, Testing!
+  author: Test Testerson
+  description: This is a test project.
+  hyperlink: test
+
+- type: page
+  title: Testing2!
+  author: Test Testerson22
+  description: This is a test project.2
+  hyperlink: test2
+
+- type: link
+  title: Testing2!
+  author: Test Testerson22
+  description: This is a test project.2
+  hyperlink: https://evan.new-schmidt.com

@@ -13,15 +13,22 @@
             </div>
             <div class="Content__wrapper">
                 {{content}}
-                {% for page in site.projects %}
+                {% for project in site.data.projects %}
                     <div class="Project__wrapper">
                         <div class="Project__title">
-                            <h2>{{page.title}} - {{page.author}}</h2>
+                            <h2>{{project.title}} - {{project.author}}</h2>
                             <div class="Project__button">_</div>
                         </div>
                         <div class="Project__description">
-                            {{page.description}}
+                            {{project.description}}
                         </div>
+                        {% if project.type == 'page' %}
+                            {% assign proj_href = '/projects/' | append: project.hyperlink %}
+                        {% else %}
+                            {% assign proj_href = project.hyperlink %}
+                        {% endif %}
+                        <a href={{proj_href}}>Read More</a>
+
                     </div>
                 {% endfor %}
             </div>
