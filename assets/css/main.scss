@@ -3,12 +3,12 @@
 
 @font-face {
     font-family: 'Terminal Grotesque';
-    src: url('/assets/fonts/terminal-grotesque-webfont.eot');
-    src: url('/assets/fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-         url('/assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-         url('/assets/fonts/terminal-grotesque-webfont.woff') format('woff'),
-         url('/assets/fonts/terminal-grotesque-webfont.ttf') format('truetype');
+    src: url('assets/fonts/terminal-grotesque-webfont.eot');
+    src: url('assets/fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+         url('assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+         url('assets/fonts/terminal-grotesque-webfont.woff') format('woff'),
+         url('assets/fonts/terminal-grotesque-webfont.ttf') format('truetype');
 }
 
 @keyframes slide_in_left {
