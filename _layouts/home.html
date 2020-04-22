@@ -1,53 +1,33 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
-        <title>{{page.title}} - {{site.title}}</title>
-    </head>
-    <body>
-        <div class="Page__wrapper">
-            <div class="Header__wrapper">
-                <div class="Header__inner">
-                    <h1 class="Header__title">AHS Capstone</h1>
-                    <img class="Header__image" src="assets/header-icon-04.png" />
-                    <img class="Header__image" src="assets/header-icon-05.png" />
-                    <img class="Header__image" src="assets/header-icon-06.png" />
-                    <img class="Header__image" src="assets/header-icon-07.png" />
-                </div>
-            </div>
-            <div class="Content__wrapper">
-                {{content}}
-                {% for project in site.data.projects %}
-                    {% assign idx = forloop.index | modulo: 2 %}
-                    {% if idx == 1 %}
-                        {% assign wrapper_class = 'Project__wrapper__left' %}
-                    {% else %}
-                        {% assign wrapper_class = 'Project__wrapper__right' %}
-                    {% endif %}
+---
+layout: default
+---
 
-                    <div class={{wrapper_class}}>
-                        <div class="Project__title">
-                            <h2>{{project.title}} - {{project.author}}</h2>
-                            <div class="Project__button">
-                                <img class="Project__spiral" src="assets/spiral.png" />
-                            </div>
-                        </div>
-                        <div class="Project__content">
-                            <img src={{project.img}} class="Project__img" />
-                            <div class="Project__description">
-                                {{project.description}}    
-                                {% if project.type == 'page' %}
-                                    {% assign proj_href = '/projects/' | append: project.hyperlink %}
-                                {% else %}
-                                    {% assign proj_href = project.hyperlink %}
-                                {% endif %}
-                                <a class="Project__link" href={{proj_href}} target="_blank">MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+{% for project in site.data.projects %}
+    {% assign idx = forloop.index | modulo: 2 %}
+    {% if idx == 1 %}
+        {% assign wrapper_class = 'Project__wrapper__left' %}
+    {% else %}
+        {% assign wrapper_class = 'Project__wrapper__right' %}
+    {% endif %}
+
+    <div class={{wrapper_class}}>
+        <div class="Project__title">
+            <h2>{{project.title}} - {{project.author}}</h2>
+            <div class="Project__button">
+                <img class="Project__spiral" src="assets/spiral.png" />
             </div>
         </div>
-    </body>
-</html>
+        <div class="Project__content">
+            <img src={{project.img}} class="Project__img" />
+            <div class="Project__description">
+                {{project.description}}    
+                {% if project.type == 'page' %}
+                    {% assign proj_href = '/projects/' | append: project.hyperlink | relative_url %}
+                {% else %}
+                    {% assign proj_href = project.hyperlink | relative_url %}
+                {% endif %}
+                <a class="Project__link" href={{proj_href}} target="_blank">MORE</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}

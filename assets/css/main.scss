@@ -3,12 +3,12 @@
 
 @font-face {
     font-family: 'Terminal Grotesque';
-    src: url('assets/fonts/terminal-grotesque-webfont.eot');
-    src: url('assets/fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-         url('assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-         url('assets/fonts/terminal-grotesque-webfont.woff') format('woff'),
-         url('assets/fonts/terminal-grotesque-webfont.ttf') format('truetype');
+    src: url({{'assets/fonts/terminal-grotesque-webfont.eot' | relative_url}});
+    src: url({{'assets/fonts/terminal-grotesque-webfont.eot?#iefix' | relative_url}}) format('embedded-opentype'),
+         url({{'assets/fonts/terminal-grotesque-webfont.woff2' | relative_url}}) format('woff2'),
+         url({{'assets/fonts/terminal-grotesque-webfont.woff2' | relative_url}}) format('woff2'),
+         url({{'assets/fonts/terminal-grotesque-webfont.woff' | relative_url}}) format('woff'),
+         url({{'assets/fonts/terminal-grotesque-webfont.ttf' | relative_url}}) format('truetype');
 }
 
 @keyframes slide_in_left {
@@ -57,14 +57,14 @@ h1 {
 }
 
 .Header__image {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .Header__inner {
     display: flex;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
     margin: 0 30px;
 }
 
@@ -149,6 +149,35 @@ h1 {
     -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
     -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
     box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+}
+
+.Page__content-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 76px;
+    }
+    
+    .Header__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 10px;
+    }
+
+    .Header__wrapper {
+        height: auto;
+    }
+
+    .Project__content {
+        flex-direction: column;
+    }
+
+    .Project__description {
+        flex-direction: row;
+    }
 }
 
 

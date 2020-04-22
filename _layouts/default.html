@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href={{'/assets/css/main.css' | relative_url}} />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+        <title>{{page.title}} - {{site.title}}</title>
+    </head>
+    <body>
+        <div class="Page__wrapper">
+            <div class="Header__wrapper">
+                <div class="Header__inner">
+                    <h1 class="Header__title">AHS Capstone</h1>
+                    <div class="Header__image-row">
+                        <img class="Header__image" src={{'assets/header-icon-04.png' | relative_url}} />
+                        <img class="Header__image" src={{'assets/header-icon-05.png' | relative_url}} />
+                        <img class="Header__image" src={{'assets/header-icon-06.png' | relative_url}} />
+                        <img class="Header__image" src={{'assets/header-icon-07.png' | relative_url}} />    
+                    </div>
+                </div>
+            </div>
+            <div class="Content__wrapper">
+                {{content}}
+            </div>
+        </div>
+    </body>
+</html>
