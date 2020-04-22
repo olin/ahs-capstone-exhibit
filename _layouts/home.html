@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<div class="Home__description">
+    {{content}}
+</div>
 {% for project in site.data.projects %}
     {% assign idx = forloop.index | modulo: 2 %}
     {% if idx == 1 %}
@@ -18,7 +21,9 @@ layout: default
             </div>
         </div>
         <div class="Project__content">
-            <img src={{project.img}} class="Project__img" />
+            <div class="Project__img__container">
+                <img class="Project__img" src={{project.img}} />
+            </div>
             <div class="Project__description">
                 {{project.description}}    
                 {% if project.type == 'page' %}
