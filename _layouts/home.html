@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/assets/css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
         <title>{{page.title}} - {{site.title}}</title>
     </head>
     <body>
@@ -30,14 +31,17 @@
                             <h2>{{project.title}} - {{project.author}}</h2>
                             <div class="Project__button">_</div>
                         </div>
-                        <div class="Project__description">
-                            {{project.description}}
-                            {% if project.type == 'page' %}
-                                {% assign proj_href = '/projects/' | append: project.hyperlink %}
-                            {% else %}
-                                {% assign proj_href = project.hyperlink %}
-                            {% endif %}
-                            <a class="Project__link" href={{proj_href}} target="_blank">Read More</a>
+                        <div class="Project__content">
+                            <img src={{project.img}} class="Project__img" />
+                            <div class="Project__description">
+                                {{project.description}}    
+                                {% if project.type == 'page' %}
+                                    {% assign proj_href = '/projects/' | append: project.hyperlink %}
+                                {% else %}
+                                    {% assign proj_href = project.hyperlink %}
+                                {% endif %}
+                                <a class="Project__link" href={{proj_href}} target="_blank">MORE</a>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}

@@ -30,10 +30,12 @@
 }
 
 html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     width: 100%;
     margin: 0;
     min-height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +75,7 @@ h1 {
 .Content__wrapper {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 15px;
     max-width: 100%;
 }
 
@@ -101,8 +103,14 @@ h1 {
     border-bottom: 1px solid black;
 }
 
-.Project__description {
+.Project__content {
+    display: flex;
     padding: 20px 10px;
+}
+
+.Project__description {
+    display: flex;
+    flex-direction: column;
 }
 
 .Project__button {
@@ -120,7 +128,13 @@ h1 {
     color: black;
     outline: 1px solid black;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 65px;
+
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 }
 
 

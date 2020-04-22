@@ -3,15 +3,18 @@
   author: Test Testerson
   description: This is a test project.
   hyperlink: test
+  img: assets/test-06.png
 
 - type: page
   title: Testing2!
   author: Test Testerson22
   description: This is a test project.2
   hyperlink: test2
+  img: assets/test-06.png
 
 - type: link
   title: Testing2!
   author: Test Testerson22
   description: This is a test project.2
   hyperlink: https://evan.new-schmidt.com
+  img: assets/test-06.png
