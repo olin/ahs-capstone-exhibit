@@ -47,6 +47,14 @@ h1 {
     font-size: 96px;
 }
 
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
 .Page__wrapper {
     width: 100%;
 }
@@ -68,6 +76,7 @@ h1 {
 }
 
 .Header__title {
+    color: black;
     display: inline-block;
 }
 
@@ -158,9 +167,39 @@ h1 {
     box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 }
 
+.Page__comment {
+    background-color: #fffdbe;
+    border: 1px solid black;
+    font-size: 14px;
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+    position: absolute;
+}
+
+.Page__comment-link {
+    background-color: #fffdbe;
+    border: 1px solid black;
+}
+
+.left {
+    right: 100%;
+}
+
+.right {
+    left: 100%;
+}
+
 .Page__content-inner {
     max-width: 700px;
     margin: 0 auto;
+    position: relative;
+}
+
+.Page__header {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
 }
 
 @media (max-width: 1024px) {
