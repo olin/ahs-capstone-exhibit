@@ -85,6 +85,10 @@ h1 {
     max-width: 1000px;
     align-self: flex-start;
     animation: 1s ease-out 0s 1 slide_in_left;
+
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 }
 
 .Project__wrapper__right {
@@ -93,6 +97,10 @@ h1 {
     max-width: 1000px;
     align-self: flex-end;
     animation: 1s ease-out 0s 1 slide_in_right;
+
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 }
 
 .Project__title {
@@ -105,11 +113,13 @@ h1 {
 
 .Project__content {
     display: flex;
-    padding: 20px 10px;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .Project__description {
     display: flex;
+    flex: 0 1 50%;
     flex-direction: column;
 }
 
@@ -122,6 +132,10 @@ h1 {
     text-align: center;
     line-height: 45px;
     width: 45px;
+}
+
+.Project__spiral {
+    margin: 7px;
 }
 
 .Project__link {
