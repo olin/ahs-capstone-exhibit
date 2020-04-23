@@ -191,7 +191,7 @@ h3 {
 }
 
 .Page__content-inner {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     position: relative;
 }
@@ -200,6 +200,23 @@ h3 {
     margin: 20px 0;
     padding: 10px 0;
     border-bottom: 1px solid black;
+}
+
+@media (max-width: 1400px) {
+    .Page__comment {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        margin: 0;
+    }
+
+    .left {
+        right: 0%;
+    }
+
+    .right {
+        left: 0%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -222,6 +239,7 @@ h3 {
         margin: 0;
     }
 
+
     .Project__wrapper__left {
         max-width: 100%;
         margin: 10px 0;
@@ -241,5 +259,3 @@ h3 {
         height: 25px;
     }
 }
-
-
