@@ -11,21 +11,21 @@
          url({{'assets/fonts/terminal-grotesque-webfont.ttf' | relative_url}}) format('truetype');
 }
 
-@keyframes slide_in_left {
+@keyframes bgcolor {
     0% {
-        transform: translateX(-100%);
+        background-color: #FFF3A0;
     }
-    100% {
-        transform: translateX(0);
-    }
-}
 
-@keyframes slide_in_right {
-    0% {
-        transform: translateX(100%);
+    33% {
+        background-color: #94EBC1;
     }
+
+    66% {
+        background-color: #FFB8A0;
+    }
+
     100% {
-        transform: translateX(0);
+        background-color: #B79CEA;
     }
 }
 
@@ -53,6 +53,26 @@ h2 {
 
 h3 {
     font-size: 28px;
+}
+
+.Page__intro {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 20px 20px;
+}
+
+.Exhibit__link {
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    width: 230px;
+    padding: 10px;
+    text-align: center;
+
+    -webkit-animation: bgcolor 6s infinite;
+    animation: bgcolor 3s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
 }
 
 .Page__wrapper {

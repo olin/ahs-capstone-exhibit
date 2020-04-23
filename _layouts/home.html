@@ -2,10 +2,15 @@
 layout: default
 ---
 
-<div class="Home__description">
-    {{content}}
+<div class="Project__wrapper__left">
+    <div class="Page__intro">
+        {{content}}
+        <a class="Exhibit__link" href={{site.exhibitlink}} target="_blank">ENTER VIRTUAL EXHIBIT</a>
+    </div>
 </div>
-{% for project in site.data.projects %}
+
+{% assign projects = site.projects | concat: site.data.projects | sort: 'author' %}
+{% for project in projects %}
     {% assign idx = forloop.index | modulo: 2 %}
     {% if idx == 1 %}
         {% assign wrapper_class = 'Project__wrapper__left' %}
@@ -26,11 +31,7 @@ layout: default
             </div>
             <div class="Project__description">
                 {{project.description}}    
-                {% if project.type == 'page' %}
-                    {% assign proj_href = '/projects/' | append: project.hyperlink | relative_url %}
-                {% else %}
-                    {% assign proj_href = project.hyperlink | relative_url %}
-                {% endif %}
+                {% assign proj_href = project.url | relative_url | append: project.hyperlink %}
                 <a class="Project__link" href={{proj_href}} target="_blank">MORE</a>
             </div>
         </div>
