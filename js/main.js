@@ -7,17 +7,7 @@ var text = document.querySelector('a-text');
 console.log(scene);
 console.log(camera.children[1]);
 
-document.addEventListener('body-loaded', function (e) {
-    console.log(e.detail);
-})
-
-document.addEventListener('collide', function (e) {
-    console.log(e.detail.contact.ni);
-})
-
 el.addEventListener('click', function (e) {
     console.log('clicked');
 });
-console.log(el);
-console.log(el.getAttribute('position'));
 
