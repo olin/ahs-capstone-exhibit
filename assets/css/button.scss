@@ -1,0 +1,70 @@
+---
+---
+
+@keyframes bgcolor {
+    0% {
+        background-color: #FFF3A0;
+    }
+
+    33% {
+        background-color: #94EBC1;
+    }
+
+    66% {
+        background-color: #FFB8A0;
+    }
+
+    100% {
+        background-color: #B79CEA;
+    }
+}
+
+.Exhibit__link {
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    cursor: default;
+}
+
+.Exhibit__link--ready {
+    -webkit-animation: bgcolor 6s infinite;
+    animation: bgcolor 3s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    cursor: pointer;
+
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+}
+
+.Exhibit__link--ready:active {
+    transform: translate(5px, 5px);
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.Project__link:active {
+    transform: translate(5px, 5px);
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.Project__link {
+    color: black;
+    outline: 1px solid black;
+    padding: 10px;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 65px;
+
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+}

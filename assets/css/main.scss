@@ -1,24 +1,6 @@
 ---
 ---
 
-@keyframes bgcolor {
-    0% {
-        background-color: #FFF3A0;
-    }
-
-    33% {
-        background-color: #94EBC1;
-    }
-
-    66% {
-        background-color: #FFB8A0;
-    }
-
-    100% {
-        background-color: #B79CEA;
-    }
-}
-
 html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -51,19 +33,6 @@ h3 {
     padding: 2px 20px 20px;
 }
 
-.Exhibit__link {
-    border: 1px solid black;
-    color: black;
-    font-weight: bold;
-    width: 230px;
-    padding: 10px;
-    text-align: center;
-
-    -webkit-animation: bgcolor 6s infinite;
-    animation: bgcolor 3s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-}
 
 .Page__wrapper {
     width: 100%;
@@ -162,19 +131,6 @@ h3 {
 
 .Project__spiral {
     margin: 7px;
-}
-
-.Project__link {
-    color: black;
-    outline: 1px solid black;
-    padding: 10px;
-    margin: 10px 0 0;
-    text-align: center;
-    width: 65px;
-
-    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 }
 
 .Page__comment {

@@ -1,13 +1,27 @@
-var el = document.querySelector('a-box');
-var scene = document.querySelector('a-scene').object3D;
-var camera = document.querySelector('a-camera');
+// var el = document.querySelector('a-box');
+// var camera = document.querySelector('a-camera');
 
-var text = document.querySelector('a-text');
+// var text = document.querySelector('a-text');
 
-console.log(scene);
-console.log(camera.children[1]);
+// el.addEventListener('click', function (e) {
+//     console.log('clicked');
+// });
+var scene = document.querySelector('a-scene');
+var bgMusic = document.querySelector('audio');
+var enterButton = document.getElementById('enter');
+var splash = document.getElementById('splash');
+var isLoaded = false;
 
-el.addEventListener('click', function (e) {
-    console.log('clicked');
-});
+scene.addEventListener('loaded', function (e) {
+    isLoaded = true;
+    enterButton.classList.add('Exhibit__link--ready');
+    enterButton.innerText = 'ENTER';
+})
+
+enterButton.onclick = function(e) {
+    if (isLoaded) {
+        bgMusic.play();
+        splash.style.visibility = 'hidden';    
+    }
+}
 

@@ -10,7 +10,7 @@
   </head>
   <body>
     {% assign sound_url = 'assets/background.mp3' | relative_url %}
-    <audio src={{sound_url}} loop autoplay></audio>
+    <audio src={{sound_url}} loop preload="auto"></audio>
     <a-scene background="color: #FAFAFA">
       <!-- <a-entity gltf-model="assets/DH.gltf" nav-mesh></a-entity> -->
       <!-- {% assign sound_src = 'src: url(' | append: sound_url | append: ')' %}
@@ -25,8 +25,11 @@
       <a-cylinder dynamic-body position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
       <a-plane static-body text-appear position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
     </a-scene>
-    <div class="Page__splash">
-      <button class="Page__enter">ENTER</button>
+    <div class="Exhibit__splash" id="splash">
+      <div class="Exhibit__elements">
+        <img src={{'assets/vr-title.png' | relative_url}} class="Exhibit__img" />
+        <button class="Exhibit__link" id="enter">LOADING</button>
+      </div>
     </div>
   </body>
   <script src="js/main.js"></script>

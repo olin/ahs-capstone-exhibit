@@ -1,7 +1,18 @@
 ---
 ---
 
-.Page__splash {
+.Exhibit__elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Exhibit__link {
+    font-size: 50px;
+    margin: 20px;
+}
+
+.Exhibit__splash {
     align-items: center;
     background-color: #ffffff;
     bottom: 0;
