@@ -1,20 +1,28 @@
-- type: page
-  title: asdf!
-  author: Test Testerson
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis eros nec turpis gravida tempus sed vel turpis. Fusce venenatis vulputate fermentum. Nullam blandit quam mattis tristique sagittis. Praesent dapibus metus at ipsum commodo ullamcorper. Sed in nibh sollicitudin, varius turpis id, tristique eros. Vivamus facilisis velit vel lacus iaculis, malesuada lacinia nibh vulputate. Quisque malesuada ipsum non metus pellentesque congue. Cras a lacus ut velit commodo euismod in eget lacus. Donec scelerisque finibus arcu, ut ullamcorper ante. 
-  hyperlink: https://evan.new-schmidt.com
-  img: assets/test-06.png
+- author: Ava Lakmazaheri
+  title: Degrees of Freedom
+  description: How does an engineer take a hard look at her practice? Degrees of Freedom reconsiders the assumptions that drive research in biomechatronics — investigating questions about the body and testing my own assumptions about bodies and technologies — to land in an open space of questions. This exploration is guided through a curation of art pieces pertaining to the body and adaptive technologies.
+  hyperlink: http://ava.ac/dof.html
+  img: assets/dof.png
 
-- type: page
-  title: asdfeeee!
-  author: Test Testerson22
-  description: This is a test project.2
-  hyperlink: https://evan.new-schmidt.com
-  img: assets/test-06.png
+- author: Vicky McDermott and Prava Dhulipalla
+  title: A Guide to Student-Led Courses
+  description: For our AHS Capstone project this semester, we created a guide for students interested in being involved with Student Led Courses (SLCs) at Olin. We also worked to create an archive of the course materials for the SLC we are teaching this semester in Advanced Algorithms. We have had the opportunity to work on two SLCs during our time at Olin (DSA and Advanced Algorithms), and we think SLCs are an amazing and uniquely Olin opportunity. We want our guide to serve as a blueprint for students interested in pursuing the SLC route in the future. 
+  hyperlink: https://pravaolin.wixsite.com/olinslc
+  zoom: https://olin.zoom.us/j/843306954
+  img: assets/slc.jpg
 
-- type: link
-  title: asdfffffff!
-  author: Test Testerson22
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis eros nec turpis gravida tempus sed vel turpis. Fusce venenatis vulputate fermentum. Nullam blandit quam mattis tristique sagittis. Praesent dapibus metus at ipsum commodo ullamcorper. Sed in nibh sollicitudin, varius turpis id, tristique eros. Vivamus facilisis velit vel lacus iaculis, malesuada lacinia nibh vulputate. Quisque malesuada ipsum non metus pellentesque congue. Cras a lacus ut velit commodo euismod in eget lacus. Donec scelerisque finibus arcu, ut ullamcorper ante. 
-  hyperlink: https://evan.new-schmidt.com
-  img: assets/test-06.png
+- author: Kai Loewenstein
+  title: Globsters - A Visual Novel
+  description: This semester, I created some assets for a visual novel I'm working on about kids with superpowers. Sam's superpower is the ability to identify "globsters," the remnants of organic bodies that wash up on shore, bloated and decomposed to the point where they are mistaken for monsters. But what happens when Sam really does find a monster? 
+  hyperlink: https://drive.google.com/open?id=1VbQ9c4_36JSi80l6TtnfisT9TZh9VoDm
+  img: assets/glob.jpg
+
+- author: Aurora Bunten
+  title: The Oneness
+  description: The Oneness is an installation sound experience that speaks to the transience and change that our world is currently experiencing. The instillation comprises a sound composition that is experienced in a special environment. The sound composition is an eight minute long combination of varying layers of sine frequencies, changing in intensity and tone throughout the piece, with other underlying sounds that affect the mood of the piece. The composition is intended to bring the participant to the present and make them focus on their body/physical senses; bringing them first more viscerally into themselves and then the surrounding world once the experience ends.
+  hyperlink: https://abunten.github.io/
+  zoom: https://olin.zoom.us/u/aYReIWV9m
+  img: assets/one.png  
+
+
+

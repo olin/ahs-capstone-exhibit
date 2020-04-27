@@ -9,7 +9,7 @@ layout: default
     </div>
 </div>
 
-{% assign projects = site.projects | concat: site.data.projects | sort: 'author' %}
+{% assign projects = site.data.projects | concat: site.projects %}
 {% for project in projects %}
     {% assign idx = forloop.index | modulo: 2 %}
     {% if idx == 1 %}

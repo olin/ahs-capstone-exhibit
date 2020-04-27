@@ -118,6 +118,15 @@ h3 {
     max-width: 100%;
 }
 
+.Project__img__container {
+    align-items: center;
+    display: flex;
+    filter: grayscale(100%);
+    flex: 0 1 50%;
+    justify-content: center;
+    margin: 0 10px;
+}
+
 .Project__button {
     border-left: 1px solid black;
     height: 100%;
@@ -218,6 +227,10 @@ h3 {
 
     .Project__content {
         flex-direction: column;
+    }
+
+    .Project__img__container {
+        margin: 0 0 10px;
     }
 
     .Project__link {
