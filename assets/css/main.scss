@@ -113,11 +113,16 @@ h3 {
     box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 }
 
-.Project__title {
+.Project__head {
     padding: 10px;
     padding-right: 55px;
     position: relative;
     border-bottom: 1px solid black;
+}
+
+.Project__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 
 .Project__content {
