@@ -12,7 +12,8 @@ AFRAME.registerComponent('prox', {
     tick: function(t, dt) {
         let camPos = this.cam.object3D.position;
         let elPos = this.el.object3D.position;
-        if (elPos.distanceTo(camPos) < this.data.dist) {
+        let dist = elPos.distanceTo(camPos);
+        if (dist < this.data.dist) {
             if (!this.inProx) {
                 this.inProx = true;
                 this.el.setAttribute('text', {value: this.data.message});  
@@ -26,12 +27,12 @@ AFRAME.registerComponent('prox', {
 
 AFRAME.registerComponent('proxlink', {
     schema: {
-        dist: {type: 'number', default: 10},
+        dist: {type: 'number', default: 2},
         href: {type: 'string', default: '/'}
     },
 
     init: function() {
-        this.cam = document.querySelector('a-camera');
+        this.cam = document.querySelector('#rig');
         this.inProx = false;
         this.onClick = function(e) {
             if (this.inProx) {
