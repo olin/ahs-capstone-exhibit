@@ -26,7 +26,7 @@ AFRAME.registerComponent('prox', {
 
 AFRAME.registerComponent('proxlink', {
     schema: {
-        dist: {type: 'number', default: 1},
+        dist: {type: 'number', default: 10},
         href: {type: 'string', default: '/'}
     },
 
