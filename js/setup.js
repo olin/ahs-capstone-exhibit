@@ -46,12 +46,10 @@ AFRAME.registerComponent('proxlink', {
             let camPos = this.cam.object3D.position;
             let elPos = this.el.object3D.position;
             if (elPos.distanceTo(camPos) < this.data.dist) {
-                console.log('on');
                 this.pointer.object3D.visible = true;
             }
         }
         this.onMouseLeave = function(e) {
-            console.log('off');
             this.pointer.object3D.visible = false;
         }
 
