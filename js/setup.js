@@ -5,7 +5,7 @@ AFRAME.registerComponent('prox', {
     },
 
     init: function() {
-        this.cam = document.querySelector('a-camera');
+        this.cam = document.querySelector('#rig');
         this.inProx = false;
     },
 
