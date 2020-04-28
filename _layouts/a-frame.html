@@ -27,38 +27,7 @@
         </a-entity>
       </a-entity>
       <a-entity gltf-model="assets/scene_navmesh.gltf" nav-mesh visible="false"></a-entity>
-      <a-box 
-        height="1.5"
-        width=".8"
-        depth=".8"
-        text-appear 
-        id="box" 
-        position="3 .75 -3" 
-        rotation="0 45 0" 
-        color="#dddddd" 
-        shadow></a-box>
-      <a-box
-        proxlink="href: index.html; dist: 2.11"
-        height=".4"
-        width=".4"
-        depth=".4"
-        color="#EF2D5E"
-        position="3 1.8 -3"
-        rotation="0 0 0"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
-        animation__2="property: position; to: 3 2 -3; loop: true; dir: alternate; easing: easeInOutQuad"
-        shadow
-      ></a-box>
-      <a-entity 
-        look-at="#camera"
-        prox="dist: 2.1; message: check out my project!\n(click)" 
-        width=".8" 
-        depth=".8" 
-        height="3.6" 
-        position="3 1.8 -3" 
-        rotation="0 45 0"
-        text="width: 1.6; font: exo2bold; zOffset: .45; anchor: center; align: center; color: black" 
-        ></a-entity> 
+      {% include project-pedestals.html %}
       <a-cylinder  position="-5 7.5 -12" radius="5" height="15" color="#FFC65D" shadow></a-cylinder>
       <a-plane position="0 0 0" rotation="-90 0 0" width="40" height="40" color="#7BC8A4" shadow></a-plane>
     </a-scene>

@@ -3,6 +3,8 @@
   description: How does an engineer take a hard look at her practice? Degrees of Freedom reconsiders the assumptions that drive research in biomechatronics — investigating questions about the body and testing my own assumptions about bodies and technologies — to land in an open space of questions. This exploration is guided through a curation of art pieces pertaining to the body and adaptive technologies.
   hyperlink: http://ava.ac/dof.html
   img: assets/dof.png
+  pos: 3 .75 -3
+  rotation: 0 45 0
 
 - author: Vicky McDermott and Prava Dhulipalla
   title: A Guide to Student-Led Courses
