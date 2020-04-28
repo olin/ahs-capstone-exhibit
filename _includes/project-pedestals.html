@@ -10,25 +10,28 @@
             color="#dddddd" 
             shadow
         ></a-box>
+        {% assign item_pos = project.pos | split: " " %}
+        {%- assign new_pos = item_pos[0] | append: ' 1.8 ' | append: item_pos[2] -%}
+        {%- assign up_pos = item_pos[0] | append: ' 2 ' | append: item_pos[2] -%}
         <a-box
-            proxlink="href: index.html; dist: 2.13"
+            proxlink="href: {{project.hyperlink}}; dist: 2.13"
             height=".4"
             width=".4"
             depth=".4"
             color="#EF2D5E"
-            position="3 1.8 -3"
+            position={{new_pos}}
             rotation="0 0 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
-            animation__2="property: position; to: 3 2 -3; loop: true; dir: alternate; easing: easeInOutQuad"
+            animation__2="property: position; to: {{up_pos}}; loop: true; dir: alternate; easing: easeInOutQuad"
             shadow
         ></a-box>
         <a-entity 
             look-at="#camera"
-            prox="dist: 2.1; message: check out my project!\n(click)" 
+            prox="dist: 2.1; message: {{project.author}}\n{{project.title}}\n(click)" 
             width=".8" 
             depth=".8" 
             height="3.6" 
-            position="3 1.8 -3" 
+            position={{new_pos}}
             rotation="0 45 0"
             text="width: 1.6; font: exo2bold; zOffset: .45; anchor: center; align: center; color: black" 
         ></a-entity> 
