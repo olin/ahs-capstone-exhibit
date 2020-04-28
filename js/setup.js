@@ -33,6 +33,7 @@ AFRAME.registerComponent('proxlink', {
 
     init: function() {
         this.cam = document.querySelector('#rig');
+        this.pointer = document.getElementById('click');
         this.onClick = function(e) {
             let camPos = this.cam.object3D.position;
             let elPos = this.el.object3D.position;
@@ -40,8 +41,27 @@ AFRAME.registerComponent('proxlink', {
                 window.location.href = this.data.href;
             }
         };
+
+        this.onMouseEnter = function(e) {
+            let camPos = this.cam.object3D.position;
+            let elPos = this.el.object3D.position;
+            if (elPos.distanceTo(camPos) < this.data.dist) {
+                console.log('on');
+                this.pointer.object3D.visible = true;
+            }
+        }
+        this.onMouseLeave = function(e) {
+            console.log('off');
+            this.pointer.object3D.visible = false;
+        }
+
         this.onClick = this.onClick.bind(this);
+        this.onMouseEnter = this.onMouseEnter.bind(this);
+        this.onMouseLeave = this.onMouseLeave.bind(this);
+
         this.el.addEventListener('click', this.onClick);
+        this.el.addEventListener('mouseenter', this.onMouseEnter);
+        this.el.addEventListener('mouseleave', this.onMouseLeave);
     }
 });
 
