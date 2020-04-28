@@ -35,24 +35,15 @@ AFRAME.registerComponent('proxlink', {
         this.cam = document.querySelector('#rig');
         this.inProx = false;
         this.onClick = function(e) {
-            if (this.inProx) {
+            console.log(this.inProx);
+            let camPos = this.cam.object3D.position;
+            let elPos = this.el.object3D.position;
+            if (elPos.distanceTo(camPos) < this.data.dist) {
                 window.location.href = this.data.href;
             }
         };
         this.onClick = this.onClick.bind(this);
         this.el.addEventListener('click', this.onClick);
-    },
-
-    tick: function(t, dt) {
-        let camPos = this.cam.object3D.position;
-        let elPos = this.el.object3D.position;
-        if (elPos.distanceTo(camPos) < this.data.dist) {
-            if (!this.inProx) {
-                this.inProx = true;
-            }
-        } else if (this.inProx) {
-            this.inProx = false;
-        }
     }
 });
 

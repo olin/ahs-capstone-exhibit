@@ -17,18 +17,20 @@
        <a-entity id="rig"
                 movement-controls="constrainToNavMesh: true"
                 position="0 0 5">
-        <a-entity camera
+        <a-entity id="camera"
+                  camera
                   position="0 1.6 0"
                   look-controls="pointerLockEnabled: true">
           <a-cursor nav-pointer
-                    raycaster="objects: [nav-mesh]"></a-cursor>
+            position="0 0 -.5"
+                    ></a-cursor>
         </a-entity>
       </a-entity>
       <a-entity gltf-model="assets/scene_navmesh.gltf" nav-mesh visible="false"></a-entity>
       <a-box 
         height="1.5"
-        width=".6"
-        depth=".6"
+        width=".8"
+        depth=".8"
         text-appear 
         id="box" 
         position="3 .75 -3" 
@@ -36,7 +38,7 @@
         color="#dddddd" 
         shadow></a-box>
       <a-box
-        proxlink="href: index.html; dist: 2"
+        proxlink="href: index.html; dist: 2.11"
         height=".4"
         width=".4"
         depth=".4"
@@ -49,13 +51,13 @@
       ></a-box>
       <a-entity 
         look-at="#camera"
-        prox="dist: 2; message: check out my project!\n(click)" 
+        prox="dist: 2.1; message: check out my project!\n(click)" 
         width=".8" 
         depth=".8" 
-        height="2.5" 
-        position="3 1.25 -3" 
+        height="3.6" 
+        position="3 1.8 -3" 
         rotation="0 45 0"
-        text="width: 1.6; font: exo2bold; zOffset: .424; anchor: center; align: center; color: black" 
+        text="width: 1.6; font: exo2bold; zOffset: .45; anchor: center; align: center; color: black" 
         ></a-entity> 
       <a-cylinder  position="-5 7.5 -12" radius="5" height="15" color="#FFC65D" shadow></a-cylinder>
       <a-plane position="0 0 0" rotation="-90 0 0" width="40" height="40" color="#7BC8A4" shadow></a-plane>
