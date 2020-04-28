@@ -34,8 +34,9 @@ AFRAME.registerComponent('proxlink', {
         this.cam = document.querySelector('a-camera');
         this.inProx = false;
         this.onClick = function(e) {
-            console.log(this.inProx);
-            window.location.href = this.data.href;
+            if (this.inProx) {
+                window.location.href = this.data.href;
+            }
         };
         this.onClick = this.onClick.bind(this);
         this.el.addEventListener('click', this.onClick);
