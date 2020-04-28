@@ -24,4 +24,3 @@ AFRAME.registerComponent('prox', {
         }
     }
 });
-
