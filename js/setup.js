@@ -26,16 +26,19 @@ AFRAME.registerComponent('prox', {
 
 AFRAME.registerComponent('proxlink', {
     schema: {
-        href: {type: 'string', default: '/'},
+        dist: {type: 'number', default: 1},
+        href: {type: 'string', default: '/'}
     },
 
     init: function() {
         this.cam = document.querySelector('a-camera');
         this.inProx = false;
-        console.log('test');
-        this.el.addEventListener('click', function(e) {
-            console.log('test');
-        })
+        this.onClick = function(e) {
+            console.log(this.inProx);
+            window.location.href = this.data.href;
+        };
+        this.onClick = this.onClick.bind(this);
+        this.el.addEventListener('click', this.onClick);
     },
 
     tick: function(t, dt) {
