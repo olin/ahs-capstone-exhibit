@@ -1,11 +1,3 @@
-// var el = document.querySelector('a-box');
-// var camera = document.querySelector('a-camera');
-
-// var text = document.querySelector('a-text');
-
-// el.addEventListener('click', function (e) {
-//     console.log('clicked');
-// });
 var scene = document.querySelector('a-scene');
 var bgMusic = document.querySelector('audio');
 var enterButton = document.getElementById('enter');

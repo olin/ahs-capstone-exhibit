@@ -1,6 +1,16 @@
 ---
 ---
 
+@keyframes pulse_animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.Exhibit__controls {
+    animation: 3s linear 0.5s infinite running pulse_animation;
+}
+
 h2 {
     font-family: 'Terminal Grotesque', Helvetica, Arial, sans-serif;
 }

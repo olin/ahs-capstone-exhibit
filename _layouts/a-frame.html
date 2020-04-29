@@ -8,12 +8,16 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
     <!-- <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script> -->
-    <script src="js/setup.js"></script>
+    <script src={{'/js/setup.js' | relative_url}}></script>
   </head>
   <body>
-    {% assign sound_url = 'assets/background.mp3' | relative_url %}
+    {% assign sound_url = '/assets/background.mp3' | relative_url %}
     <audio src={{sound_url}} loop preload="auto"></audio>
     <a-scene inspector-plugin-recast background="color: #123456">
+      <a-assets>
+        <img id="skyTexture" src={{'/assets/bg.jpg' | relative_url}} />
+      </a-assets>
+      <a-sky src="#skyTexture"></a-sky>
        <a-entity id="rig"
                 movement-controls="constrainToNavMesh: true"
                 position="0 0 0">
@@ -26,17 +30,24 @@
             position="0 0 -.3"
             geometry="primitive: ring; radiusInner: 0.002; radiusOuter: 0.0035"
                     ></a-cursor>
-          <a-image id="click" width="0.0085" height="0.013" position="-0.001 0.003 -.29" src="assets/cursor.png" visible="false"></a-image>
+          <a-image 
+            id="click" 
+            width="0.0085" 
+            height="0.013" 
+            position="-0.001 0.003 -.29" 
+            src={{'/assets/cursor.png' | relative_url}} 
+            visible="false"
+          ></a-image>
         </a-entity>
       </a-entity>
-      <a-entity gltf-model="assets/scene_navmesh.gltf" nav-mesh visible="false"></a-entity>
+      <a-entity gltf-model={{'/assets/scene_navmesh.gltf' | relative_url}} nav-mesh visible="false"></a-entity>
       {% include project-pedestals.html %}
       {% include scene.html %}
     </a-scene>
     <div class="Exhibit__splash" id="splash">
       <div class="Exhibit__elements">
         <img src={{'assets/vr-title.png' | relative_url}} class="Exhibit__img" />
-        <h2 class="Exhibit__controls">
+        <h2>
         --> CONTROLS: WASD to move, mouse to look <--
         </h2>
         <h2 class="Exhibit__controls">
@@ -46,5 +57,5 @@
       </div>
     </div>
   </body>
-  <script src="js/main.js"></script>
+  <script src={{'/js/main.js' | relative_url}}></script>
 </html>
