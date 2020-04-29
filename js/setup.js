@@ -33,7 +33,6 @@ AFRAME.registerComponent('proxlink', {
 
     init: function() {
         this.cam = document.querySelector('#rig');
-        this.pointer = document.getElementById('click');
         this.onClick = function(e) {
             let camPos = this.cam.object3D.position;
             let elPos = this.el.object3D.position;
@@ -42,24 +41,36 @@ AFRAME.registerComponent('proxlink', {
             }
         };
 
-        this.onMouseEnter = function(e) {
-            let camPos = this.cam.object3D.position;
-            let elPos = this.el.object3D.position;
-            if (elPos.distanceTo(camPos) < this.data.dist) {
-                this.pointer.object3D.visible = true;
-            }
-        }
-        this.onMouseLeave = function(e) {
-            this.pointer.object3D.visible = false;
-        }
-
         this.onClick = this.onClick.bind(this);
-        this.onMouseEnter = this.onMouseEnter.bind(this);
-        this.onMouseLeave = this.onMouseLeave.bind(this);
-
         this.el.addEventListener('click', this.onClick);
-        this.el.addEventListener('mouseenter', this.onMouseEnter);
-        this.el.addEventListener('mouseleave', this.onMouseLeave);
     }
 });
+
+AFRAME.registerComponent('hover', {
+    dependencies: ['raycaster'],
+  
+    init: function () {
+        this.numIntersect = 0;
+        this.pointer = document.getElementById('click');
+        this.onIntersect = function(e) { 
+            this.numIntersect += 1;
+            this.pointer.object3D.visible = true;
+            console.log(this.numIntersect);
+        }
+        this.onIntersectLeave = function(e) {
+            this.numIntersect -= 1;
+            if (this.numIntersect < 1) {
+                this.numIntersect = 0;
+                this.pointer.object3D.visible = false;
+            }
+        }
+
+        this.onIntersect = this.onIntersect.bind(this);
+        this.onIntersectLeave = this.onIntersectLeave.bind(this);
+
+        this.el.addEventListener('raycaster-intersection', this.onIntersect);
+        this.el.addEventListener('raycaster-intersection-cleared', this.onIntersectLeave);
+
+    }
+  });
 

@@ -4,7 +4,6 @@
             height="1.5"
             width=".8"
             depth=".8"
-            id="box" 
             position={{project.pos}}
             rotation={{project.rotation}} 
             color="#dddddd" 
@@ -12,9 +11,14 @@
         ></a-box>
         {% assign item_pos = project.pos | split: " " %}
         {%- assign new_pos = item_pos[0] | append: ' 1.8 ' | append: item_pos[2] -%}
-        {%- assign up_pos = item_pos[0] | append: ' 2 ' | append: item_pos[2] -%}
+        
+        {%- assign pos_size = project.pos | size -%}
+        {%- assign no_quote = project.pos | slice: 1, {{pos_size-2}} -%}
+        {%- assign split_quote = no_quote | split: " " -%}
+        {%- assign up_pos = split_quote[0] | append: ' 2 ' | append: split_quote[2] -%}
         <a-box
-            proxlink="href: {{project.hyperlink}}; dist: 2.13"
+            class="clickable"
+            proxlink="href: {{project.hyperlink}}; dist: 2.15"
             height=".4"
             width=".4"
             depth=".4"
