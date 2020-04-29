@@ -1,0 +1,39 @@
+{% assign ground_color='#97a8c2' %}
+{% assign wall_color='#dddddd' %}
+{% assign wood_color='#edd195' %}
+
+<!-- Ground -->
+<a-plane position="-0.0523 0 -4.6947" rotation="-90 0 0" width="8.1585" height="10.7724" color={{ground_color}} shadow></a-plane>
+<a-plane position="2.6562 0 -14.6517" rotation="-90 0 0" width="8.9298" height="11.7693" color={{ground_color}} shadow></a-plane>
+<a-plane position="-5.8771 0 -17.7115" rotation="-90 0 0" width="8.1367" height="5.6497" color={{ground_color}} shadow></a-plane>
+<a-plane position="-4.5 0 -5.9886" rotation="-90 0 0" width="2.415" height="4.0964" color={{ground_color}} shadow></a-plane>
+
+<!-- Ceiling -->
+<a-plane position="-0.0523 3 -4.6947" rotation="-90 0 0" width="8.1585" height="10.7724" color={{wall_color}} shadow></a-plane>
+<a-plane position="2.6562 3 -14.6517" rotation="-90 0 0" width="8.9298" height="11.7693" color={{wall_color}} shadow></a-plane>
+<a-plane position="-5.8771 3 -17.7115" rotation="-90 0 0" width="8.1367" height="5.6497" color={{wall_color}} shadow></a-plane>
+
+<!-- Railings -->
+<a-box position="3.9342 .7 -3.4786" width="0.1855" height="1.4" depth="8.3402" color={{wood_color}} shadow></a-box>
+<a-box position="3.1374 .6 -7.556" width="1.7792" height="1.2" depth="0.1855" color={{wood_color}} shadow></a-box>
+<a-box position="4.6844 .6 -8.8648" width="4.8733" height="1.2" depth="0.1855" color={{wood_color}} shadow></a-box>
+<a-box position="7.0283 .6 -12.7431" width="0.1855" height="1.2" depth="7.5711" color={{wood_color}} shadow></a-box>
+
+<!-- Box Walls -->
+<a-box position="1.0449 1.5 0.1885" width="0.3299" height="3" depth="1.0061" color={{wall_color}} shadow></a-box>
+<a-box position="-1.1365 1.5 0.1885" width="0.3299" height="3" depth="1.0061" color={{wall_color}} shadow></a-box>
+
+<!-- Plane Walls -->
+<a-plane position="2.4685 1.5 0.6915" rotation="0 180 0" width="3.117" height="3" color={{wall_color}}></a-plane>
+
+<!-- Tabletops -->
+<a-box position="2.6184 1.1 0.3813" width="2.8172" height="0.2" depth="0.6205" color={{wall_color}} shadow></a-box>
+<a-box position="3.6462 1.1 -2.1937" width="0.7615" height="0.2" depth="4.5294" color={{wall_color}} shadow></a-box>
+
+
+
+<!-- Columns -->
+<a-cylinder color={{wall_color}} height="3" radius="0.215" position="2.2868 1.5 -5.3979"></a-cylinder>
+<a-cylinder color={{wall_color}} height="3" radius="0.215" position="2.2868 1.5 -10.2933"></a-cylinder>
+<a-cylinder color={{wall_color}} height="3" radius="0.215" position="2.2868 1.5 -14.7361"></a-cylinder>
+
