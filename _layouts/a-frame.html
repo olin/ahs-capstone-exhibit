@@ -22,11 +22,11 @@
                   position="0 1.6 0"
                   look-controls="pointerLockEnabled: true">
           <a-cursor nav-pointer hover
-            raycaster="objects: .clickable; far: .3"
-            position="0 0 -.5"
-            geometry=
+            raycaster="objects: .clickable; far: .4"
+            position="0 0 -.3"
+            geometry="primitive: ring; radiusInner: 0.002; radiusOuter: 0.0035"
                     ></a-cursor>
-          <a-image id="click" width="0.034" height="0.046" position="-0.003 0.003 -.49" src="assets/cursor.png" visible="false"></a-image>
+          <a-image id="click" width="0.0085" height="0.013" position="-0.001 0.003 -.29" src="assets/cursor.png" visible="false"></a-image>
         </a-entity>
       </a-entity>
       <a-entity gltf-model="assets/scene_navmesh.gltf" nav-mesh visible="false"></a-entity>
