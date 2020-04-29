@@ -12,8 +12,7 @@
         {% assign item_pos = project.pos | split: " " %}
         {%- assign new_pos = item_pos[0] | append: ' 1.8 ' | append: item_pos[2] -%}
         
-        {%- assign pos_size = project.pos | size -%}
-        {%- assign no_quote = project.pos | slice: 1, {{pos_size-2}} -%}
+        {%- assign no_quote = project.pos | remove: '"' -%}
         {%- assign split_quote = no_quote | split: " " -%}
         {%- assign up_pos = split_quote[0] | append: ' 2 ' | append: split_quote[2] -%}
         <a-box
