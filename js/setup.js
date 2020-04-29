@@ -24,23 +24,15 @@ AFRAME.registerComponent('proxtext', {
 
 });
 
-AFRAME.registerComponent('proxlink', {
+AFRAME.registerComponent('clicklink', {
     schema: {
-        dist: {type: 'number', default: 2},
         href: {type: 'string', default: '/'}
     },
 
     init: function() {
-        this.cam = document.querySelector('#rig');
         this.onClick = function(e) {
-            console.log(e.detail)
-            let camPos = this.cam.object3D.position;
-            let elPos = this.el.object3D.position;
-            if (elPos.distanceTo(camPos) < this.data.dist) {
-                window.open(this.data.href, '_blank');
-            }
+            this.el.emit('clicklink', {href: this.data.href}, true);
         };
-
         this.onClick = this.onClick.bind(this);
         this.el.addEventListener('click', this.onClick);
     }
