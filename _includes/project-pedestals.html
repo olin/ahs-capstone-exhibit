@@ -9,15 +9,30 @@
             color="#dddddd" 
             shadow
         ></a-box>
+        {%- assign link_id = 'link-text-' | append: forloop.index -%}
+        {% assign box_id = 'link-box-' | append: forloop.index %}
         {% assign item_pos = project.pos | split: " " %}
         {%- assign new_pos = item_pos[0] | append: ' 1.5 ' | append: item_pos[2] -%}
         
         {%- assign no_quote = project.pos | remove: '"' -%}
         {%- assign split_quote = no_quote | split: " " -%}
         {%- assign up_pos = split_quote[0] | append: ' 1.7 ' | append: split_quote[2] -%}
+        <a-entity 
+            visible="false"
+            id={{link_id}}
+            look-at="#camera"
+            width=".6" 
+            depth=".6" 
+            height="3" 
+            position={{new_pos}}
+            rotation="0 45 0"
+            text="width: 1.6; font: exo2bold; zOffset: .3; anchor: center; align: center; color: black; value: {{project.author}}\n{{project.title}}\n(click)" 
+        ></a-entity> 
         <a-box
+            id={{box_id}}
             class="clickable"
-            proxlink="href: {{project.hyperlink}}; dist: 2.15"
+            proxlink="href: {{project.hyperlink}}; dist: 10"
+            proxtext="message: {{project.author}}\n{{project.title}}\n(click)" 
             height=".3"
             width=".3"
             depth=".3"
@@ -28,15 +43,5 @@
             animation__2="property: position; to: {{up_pos}}; loop: true; dir: alternate; easing: easeInOutQuad"
             shadow
         ></a-box>
-        <a-entity 
-            look-at="#camera"
-            prox="dist: 2.1; message: {{project.author}}\n{{project.title}}\n(click)" 
-            width=".6" 
-            depth=".6" 
-            height="3" 
-            position={{new_pos}}
-            rotation="0 45 0"
-            text="width: 1.6; font: exo2bold; zOffset: .3; anchor: center; align: center; color: black" 
-        ></a-entity> 
     {%- endif -%}
 {% endfor %}

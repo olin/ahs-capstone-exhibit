@@ -1,28 +1,27 @@
-AFRAME.registerComponent('prox', {
+AFRAME.registerComponent('proxtext', {
     schema: {
         message: {type: 'string', default: 'Check out my project!'},
-        dist: {type: 'number', default: 1}
     },
 
     init: function() {
         this.cam = document.querySelector('#rig');
         this.inProx = false;
+        this.textId = 'link-text-' + this.el.id.split('-')[2];
+        this.textElem = document.getElementById(this.textId);
+
+        this.intersected = function(e) {
+            this.textElem.object3D.visible = true;
+        }
+        this.intersectedLeave = function(e) {
+            this.textElem.object3D.visible = false;
+        }
+
+        this.intersected = this.intersected.bind(this);
+        this.intersectedLeave = this.intersectedLeave.bind(this);
+        this.el.addEventListener('raycaster-intersected', this.intersected);
+        this.el.addEventListener('raycaster-intersected-cleared', this.intersectedLeave);
     },
 
-    tick: function(t, dt) {
-        let camPos = this.cam.object3D.position;
-        let elPos = this.el.object3D.position;
-        let dist = elPos.distanceTo(camPos);
-        if (dist < this.data.dist) {
-            if (!this.inProx) {
-                this.inProx = true;
-                this.el.setAttribute('text', {value: this.data.message});  
-            }
-        } else if (this.inProx) {
-            this.inProx = false;
-            this.el.setAttribute('text', {value: ''});
-        }
-    }
 });
 
 AFRAME.registerComponent('proxlink', {
@@ -55,7 +54,7 @@ AFRAME.registerComponent('hover', {
         this.onIntersect = function(e) { 
             this.numIntersect += 1;
             this.pointer.object3D.visible = true;
-            console.log(this.numIntersect);
+            this.el.emit('textvisible', {}, false);
         }
         this.onIntersectLeave = function(e) {
             this.numIntersect -= 1;
@@ -63,6 +62,7 @@ AFRAME.registerComponent('hover', {
                 this.numIntersect = 0;
                 this.pointer.object3D.visible = false;
             }
+            this.el.emit('textinvisible');
         }
 
         this.onIntersect = this.onIntersect.bind(this);
