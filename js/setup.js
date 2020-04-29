@@ -33,10 +33,11 @@ AFRAME.registerComponent('proxlink', {
     init: function() {
         this.cam = document.querySelector('#rig');
         this.onClick = function(e) {
+            console.log(e.detail)
             let camPos = this.cam.object3D.position;
             let elPos = this.el.object3D.position;
             if (elPos.distanceTo(camPos) < this.data.dist) {
-                window.location.href = this.data.href;
+                window.open(this.data.href, '_blank');
             }
         };
 
