@@ -11,16 +11,16 @@
   description: For our AHS Capstone project this semester, we created a guide for students interested in being involved with Student Led Courses (SLCs) at Olin. We also worked to create an archive of the course materials for the SLC we are teaching this semester in Advanced Algorithms. We have had the opportunity to work on two SLCs during our time at Olin (DSA and Advanced Algorithms), and we think SLCs are an amazing and uniquely Olin opportunity. We want our guide to serve as a blueprint for students interested in pursuing the SLC route in the future. 
   hyperlink: https://pravaolin.wixsite.com/olinslc
   img: assets/slc.jpg
-  # pos: '"-1.4 .6 -6.4"'
-  # rotation: '"0 45 0"'
+  pos: '"-1.4 .6 -6.4"'
+  rotation: '"0 45 0"'
 
 - author: Kai Loewenstein
   title: Globsters - A Visual Novel
   description: This semester, I created some assets for a visual novel I'm working on about kids with superpowers. Sam's superpower is the ability to identify "globsters," the remnants of organic bodies that wash up on shore, bloated and decomposed to the point where they are mistaken for monsters. But what happens when Sam really does find a monster? 
   hyperlink: https://drive.google.com/open?id=1VbQ9c4_36JSi80l6TtnfisT9TZh9VoDm
   img: assets/glob.jpg
-  # pos: '"5.9 .6 -10.2"'
-  # rotation: '"0 45 0"'
+  pos: '"5.9 .6 -10.2"'
+  rotation: '"0 45 0"'
 
 - author: Aurora Bunten
   title: The Oneness
