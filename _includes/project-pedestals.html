@@ -31,6 +31,7 @@
         ></a-entity> 
         {% assign hyperlink = project.url | relative_url | append: project.hyperlink %}
         <a-box
+            src={{project.img | relative_url}}
             id={{box_id}}
             class="clickable"
             clicklink="href: {{hyperlink}}"
