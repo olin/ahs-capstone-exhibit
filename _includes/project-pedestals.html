@@ -1,26 +1,26 @@
 {% for project in site.data.projects %}
     {%- if project.pos And project.pos != "" And project.pos != nil -%}
         <a-box 
-            height="1.5"
-            width=".8"
-            depth=".8"
+            height="1.2"
+            width=".6"
+            depth=".6"
             position={{project.pos}}
             rotation={{project.rotation}} 
             color="#dddddd" 
             shadow
         ></a-box>
         {% assign item_pos = project.pos | split: " " %}
-        {%- assign new_pos = item_pos[0] | append: ' 1.8 ' | append: item_pos[2] -%}
+        {%- assign new_pos = item_pos[0] | append: ' 1.5 ' | append: item_pos[2] -%}
         
         {%- assign no_quote = project.pos | remove: '"' -%}
         {%- assign split_quote = no_quote | split: " " -%}
-        {%- assign up_pos = split_quote[0] | append: ' 2 ' | append: split_quote[2] -%}
+        {%- assign up_pos = split_quote[0] | append: ' 1.7 ' | append: split_quote[2] -%}
         <a-box
             class="clickable"
             proxlink="href: {{project.hyperlink}}; dist: 2.15"
-            height=".4"
-            width=".4"
-            depth=".4"
+            height=".3"
+            width=".3"
+            depth=".3"
             color="#EF2D5E"
             position={{new_pos}}
             rotation="0 0 0"
@@ -31,9 +31,9 @@
         <a-entity 
             look-at="#camera"
             prox="dist: 2.1; message: {{project.author}}\n{{project.title}}\n(click)" 
-            width=".8" 
-            depth=".8" 
-            height="3.6" 
+            width=".6" 
+            depth=".6" 
+            height="3" 
             position={{new_pos}}
             rotation="0 45 0"
             text="width: 1.6; font: exo2bold; zOffset: .45; anchor: center; align: center; color: black" 
