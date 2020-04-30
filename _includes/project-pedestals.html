@@ -37,7 +37,7 @@
             text="width: 1.5; font: exo2bold; zOffset: .3; anchor: center; align: center; color: black; value: {{project.author}}\n{{project.title}}\n(click{{discuss}})" 
         ></a-entity> 
         <a-box
-            src={{project.img | relative_url}}
+            src="small/{{project.img | relative_url}}"
             id={{box_id}}
             class="clickable"
             clicklink="href: {{hyperlink}}"
