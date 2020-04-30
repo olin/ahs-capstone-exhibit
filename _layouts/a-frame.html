@@ -51,12 +51,37 @@
         <h2>
         --> CONTROLS: WASD to move, mouse to look <--
         </h2>
-        <h2 class="Exhibit__controls">
-        **THE LIBRARY, NOW IN ONLINE FORM!**
+        <h2 class="Exhibit__controls" id="plithy-msg" style="visibility: hidden;">
+            OH GOD WHY DID I SPEND SO msgTIME ON THIS
         </h2>
         <button class="Exhibit__link" id="enter">LOADING</button>
       </div>
     </div>
+    <script>
+        let plithies = [
+            "BYO Snacks",
+            "Now with Zero Calories",
+            "Available unfurnished only",
+            "Come join a big Olin in the cloud",
+            "Learn Javascript",
+            "Web-powered",
+            "Pizza not included",
+            "Built with aframe.io",
+            "Built with socket.io",
+            "Built with jekyll",
+            "Check out bubsy3d.com",
+            "Nice to meet/unmeet you",
+            "Join the olin GitHub org",
+            "Just like that one Black Mirror episode",
+            "Want to maintain olin.build? Talk to Evan",
+            "Press Ctrl-Alt-I to open inspector",
+        ];
+        const choice = Math.floor(Math.random() * plithies.length);
+        const msg = plithies[choice];
+        let msg_el = document.getElementById('plithy-msg');
+        msg_el.textContent = msg+'!';
+        msg_el.style.visibility = 'inherit';
+    </script>
   </body>
   <script src={{'/js/main.js' | relative_url}}></script>
 </html>
