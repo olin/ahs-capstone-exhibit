@@ -65,8 +65,6 @@ It should be pointed out, then, that almost any language at Olin can be analyzed
 
 ## Examining My Own Positionality
 
-Stevens suggests that a complete critical analysis of something must also be a self-examination on the part of the analyst. As such it is important for me, as someone attempting to study Olin, to consider my own positionality—the various identities I inhabit in Olin contexts, and consequently in my analysis.
-
 {: .Page__comment #comment-body-4}
 **4/2/20**
 I think this perception was built up over a number of (mostly informal) experiences. At some point, I began noticing in many conversations that people, particularly students, would talk about Olin education using terms like “experimental” and “project-based” to refer to a lot of different things. At the same time, I got the sense that people had only a few dichotomous ways of talking about classes and pedagogy. Things were either “traditional” or “project-based/experimental,” and the definitions people gave for those terms seemed to be defined entirely by context. I found myself gaining at least a slightly more solid understanding of the history behind these terms, and I wanted to start unpacking the way they were talked about at Olin in order to bring folks into better alignment.
@@ -76,6 +74,8 @@ I think this perception was built up over a number of (mostly informal) experien
 There is also a motivational element here that involves my own deeply-held beliefs about education. As mentioned earlier, at some point I sensed a growing cohort of students who defined Olin education as a dichotomy of "traditional/project-based"--and who felt that Olin’s education should shift toward being more "traditional" and like an engineering education at another university. This sense came from a number of conversations with other students, as well as from faculty discussing feedback they'd received in their classes.  
 I don’t unilaterally support things that are “experimental” or “project-based” by virtue of that nature alone, but I care about Olin trying new things and building its own unique model of education, so I found myself taking the side of “experimental” classes, even if I necessarily didn't support them. Herein lies the problem with using these terms to talk about Olin’s education; they are inadequate at describing the variety of pedagogies and educational settings that exist.  
 QEA is a classic example of this. It's a lightning rod for people’s strong (and generally critical) opinions about project-based learning. Yet, I found that people would consider their issues with the course as an indictment of project-based learning, which they aren’t--QEA is one particular instance of a type of course that, by some definitions, isn’t even project-based.
+
+Stevens suggests that a complete critical analysis of something must also be a self-examination on the part of the analyst. As such it is important for me, as someone attempting to study Olin, to consider my own positionality—the various identities I inhabit in Olin contexts, and consequently in my analysis.
 
 My identities at Olin are an accumulation of the various experiences and roles I’ve inhabited over the course of my Olin career. This project, and the work I did for it, is a reflection of these identities. One aspect of my identity particularly relevant to this project is my view of education; indeed, <b class="Page__comment-link" id="comment-link-4">much of the motivation behind pursuing the original direction of this project was in response to what I perceived as a disconnect</b> between parties during educational conversations I’d witnessed in classes and informal settings. Yet the fact that this pattern stood out to me is based on particular <b class="Page__comment-link" id="comment-link-5">experiences:</b> doing education research, in which I deeply analyzed people’s self-narratives about education; research meetings where we often discussed how people talk about education; <b class="Page__comment-link" id="comment-link-6">readings for research and various classes, like the aforementioned Freire, that gave me language for understanding educational discourse.</b>
 
@@ -113,6 +113,29 @@ Therefore, being reflexive, and considering how we use and engage with criticali
 To that end, I want to engage with people around this project! The discussion group at the final event is one opportunity for doing this, but I wonder if there are also ways to invite the community to engage in conversation in other ways as well
 
 We can’t disentangle ourselves from the communities and identities we inhabit, and this is particularly true of a tight-knit, interwoven community such as Olin. And in the context of doing work that is critical and generative, such a close connectedness affords us opportunities. It allows us to consider how our thinking is shaped by our interactions with others, and by definition, connectedness enables us to seek out dialogue and direct engagement with others in the community. By being conscious of our positionalities, and by choosing to engage in criticality with those we are connected to, <b class="Page__comment-link" id="comment-link-8">we can use our thinking and analysis to do useful work by sharing it with others, inviting them into a dialogue, fostering conversations that are positive, constructive, and transformative.</b>
+
+## Original Work
+
+I haven't included the work I originally wrote for this project for the sake of brevity, but if you'd like to read my original work, you can access it [here.](https://docs.google.com/document/d/1NmaAfXqBIVLClBcezRGRa50KBEi3ac2Vb4ZPDUK5czM/edit?usp=sharing)
+
+## References
+
+Freire, P. (1968). Pedagogy of the oppressed. Bloomsbury publishing USA.
+
+Gee, J. P. (2004). An introduction to discourse analysis: Theory and method. Routledge.
+
+Gee, J. P. (2018). Introducing Discourse Analysis. London: Routledge, [https://doi.org/10.4324/9781315098692](https://doi.org/10.4324/9781315098692)
+
+hooks, b. (2013). Teaching Critical Thinking: Practical Wisdom. (n.p.): Taylor & Francis.
+
+Parson, L. (2016). Are STEM Syllabi Gendered? A Feminist Critical Discourse Analysis. Qualitative Report, 21(1).
+
+Rogers, R., Malancharuvil-Berkes, E., Mosley, M., Hui, D., & Joseph, G. O. G. (2005). Critical discourse analysis in education: A review of the literature. Review of educational research, 75(3), 365-416.
+
+Stevens, L. P. (2011). Locating the role of the critical discourse analyst. In An introduction to critical discourse analysis in education (pp. 211-230). Routledge.
+
+Van Dijk, T. A. (1993). Principles of critical discourse analysis. Discourse & society, 4(2), 249-283.
+
 
 
 
