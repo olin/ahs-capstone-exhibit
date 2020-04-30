@@ -5,6 +5,7 @@ description: This semester, I had planned to analyze educational discourse as it
 img: assets/crit.jpg
 pos: '"-4.580 .6 -19.431"'
 rotation: '"0 45 0"'
+zoom: https://olin.zoom.us/j/91688238857
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis eros nec turpis gravida tempus sed vel turpis. Fusce venenatis vulputate fermentum. Nullam blandit quam mattis tristique sagittis. Praesent dapibus metus at ipsum commodo ullamcorper. Sed in nibh sollicitudin, varius turpis id, tristique eros. Vivamus facilisis velit vel lacus iaculis, malesuada lacinia nibh vulputate. Quisque malesuada ipsum non metus pellentesque congue. Cras <b class="Page__comment-link" id="comment-link-1">congue.</b> a lacus ut velit commodo euismod in eget lacus. Donec scelerisque finibus arcu, ut ullamcorper ante. 

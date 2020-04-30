@@ -18,6 +18,13 @@
         {%- assign no_quote = project.pos | remove: '"' -%}
         {%- assign split_quote = no_quote | split: " " -%}
         {%- assign up_pos = split_quote[0] | append: ' 1.7 ' | append: split_quote[2] -%}
+        {% if project.zoom %}
+            {% assign hyperlink = project.zoom %}
+            {% assign discuss = ' to join Zoom discussion' %}
+        {% else %}
+            {% assign hyperlink = project.url | relative_url | append: project.hyperlink %}
+            {% assign discuss = ' for more' %}
+        {% endif %}
         <a-entity 
             visible="false"
             id={{link_id}}
@@ -27,15 +34,14 @@
             height="3" 
             position={{new_pos}}
             rotation="0 45 0"
-            text="width: 1.5; font: exo2bold; zOffset: .3; anchor: center; align: center; color: black; value: {{project.author}}\n{{project.title}}\n(click)" 
+            text="width: 1.5; font: exo2bold; zOffset: .3; anchor: center; align: center; color: black; value: {{project.author}}\n{{project.title}}\n(click{{discuss}})" 
         ></a-entity> 
-        {% assign hyperlink = project.url | relative_url | append: project.hyperlink %}
         <a-box
             src={{project.img | relative_url}}
             id={{box_id}}
             class="clickable"
             clicklink="href: {{hyperlink}}"
-            proxtext="message: {{project.author}}\n{{project.title}}\n(click)" 
+            proxtext
             height=".3"
             width=".3"
             depth=".3"

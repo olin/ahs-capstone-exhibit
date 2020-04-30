@@ -1,8 +1,4 @@
 AFRAME.registerComponent('proxtext', {
-    schema: {
-        message: {type: 'string', default: 'Check out my project!'},
-    },
-
     init: function() {
         this.cam = document.querySelector('#rig');
         this.inProx = false;
