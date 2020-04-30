@@ -9,6 +9,12 @@
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
     <!-- <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script> -->
     <script src={{'/js/setup.js' | relative_url}}></script>
+    {% assign COPRESENCE_URL = "https://stormy-retreat-22009.herokuapp.com" %}
+    <script src="{{COPRESENCE_URL}}/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('{{COPRESENCE_URL}}');
+    </script>
+    <script src="{{COPRESENCE_URL}}/client.js"></script>
   </head>
   <body>
     {% assign sound_url = '/assets/background.mp3' | relative_url %}
@@ -25,7 +31,8 @@
         <a-entity id="camera"
                   camera
                   position="0 1.6 0"
-                  look-controls="pointerLockEnabled: true">
+                  look-controls="pointerLockEnabled: true"
+                  rotation-reader>
           <a-cursor nav-pointer hover
             raycaster="objects: .clickable; far: .6"
             position="0 0 -.3"
