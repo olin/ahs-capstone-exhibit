@@ -34,7 +34,7 @@ layout: default
                 {% assign proj_href = project.url | relative_url | append: project.hyperlink %}
                 <a class="Project__link" href={{proj_href}} target="_blank">MORE</a>
                 {% if project.zoom %}
-                    <a class="Exhibit__link Exhibit__link--ready">Join Zoom Discussion (8-9pm EST)</a>
+                    <a class="Exhibit__link Exhibit__link--ready" href={{project.zoom}}>Join Zoom Discussion (8-9pm EST)</a>
                 {% endif %}
             </div>
         </div>
