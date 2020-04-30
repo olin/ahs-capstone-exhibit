@@ -36,12 +36,13 @@
             width="0.0085" 
             height="0.013" 
             position="-0.001 0.003 -.29" 
-            src={{'/assets/cursor.png' | relative_url}} 
+            src={{'assets/cursor.png' | relative_url}} 
             visible="false"
           ></a-image>
         </a-entity>
       </a-entity>
       <a-entity gltf-model={{'/assets/scene_navmesh.gltf' | relative_url}} nav-mesh visible="false"></a-entity>
+      <a-image src={{'assets/thanks.jpg' | relative_url}} width="0.3" height="0.35" position="2.86 0.994 -0.495" rotation="0 45 0"></a-image>
       {% include project-pedestals.html %}
       {% include scene.html %}
     </a-scene>
