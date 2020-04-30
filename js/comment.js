@@ -6,12 +6,14 @@ function onClick (e) {
     var matching_comment_id = "comment-body-" + id_num;
     this.style.backgroundColor ="#ffe376";
     document.getElementById(matching_comment_id).style.backgroundColor = "#ffe376";
+    document.getElementById(matching_comment_id).style.zIndex = 1;
 }
 
 function onClickBody (e) {
     var id_num = this.id.split("-")[2];
     var matching_comment_id = "comment-link-" + id_num;
     this.style.backgroundColor ="#ffe376";
+    this.style.zIndex = 1;
     document.getElementById(matching_comment_id).style.backgroundColor = "#ffe376";
 }
 
@@ -19,6 +21,7 @@ function clickClear(e) {
     var target_id = e.target.id.split("-")[2];
     for (var i = 0; i < comments.length; i++ ) {
         if (comments[i].id.split("-")[2] != target_id) {
+            comments[i].style.zIndex = 0;
             comments[i].style.backgroundColor ="#fffdbe";
         }
     }
