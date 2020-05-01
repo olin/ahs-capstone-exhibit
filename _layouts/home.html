@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="Project__wrapper__left" style="display: none">
+<div class="Project__wrapper__left">
     <div class="Page__intro">
         {{content}}
         <a class="Exhibit__link Exhibit__link--ready" href={{'exhibit' | relative_url}}>ENTER VIRTUAL EXHIBIT</a>
@@ -18,7 +18,7 @@ layout: default
         {% assign wrapper_class = 'Project__wrapper__right' %}
     {% endif %}
 
-    <div class={{wrapper_class}} style="display: none">
+    <div class={{wrapper_class}}>
         <div class="Project__head">
             <h3>{{project.author}} | <i class="Project__title">{{project.title}}</i> </h3>
             <div class="Project__button">

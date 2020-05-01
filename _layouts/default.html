@@ -5,9 +5,16 @@
         <link rel="stylesheet" href={{'/assets/css/main.css' | relative_url}} />
     </head>
     <body>
-        <h2>Coming soon! Check back May 1st...</h2>
-        <div class="Page__wrapper" >
-            <div class="Header__wrapper" style="display: none">
+        <div class="Countdown__splash" id="splash" style="visibility: hidden">
+            <h2>AHS CAP ONLINE: Coming soon...</h2>
+            <h3 class="Countdown__msg" id="plithy-msg" style="visibility: hidden;">
+                OH GOD WHY DID I SPEND SO MUCH TIME ON THIS
+            </h3>
+            <h2 id="timer">...</h2>
+            {% include plithies.html %}
+        </div>
+        <div class="Page__wrapper" id="page-wrapper" style="display: none">
+            <div class="Header__wrapper">
                 <div class="Header__inner">
                     <a href={{'/' | relative_url}}>
                         <h1 class="Header__title">{{site.title}}</h1>
@@ -26,4 +33,5 @@
         </div>
     </body>
     <script src={{'/js/comment.js' | relative_url}} ></script>
+    <script src={{'/js/countdown.js' | relative_url}} ></script>
 </html>

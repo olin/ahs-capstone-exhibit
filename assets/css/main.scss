@@ -19,6 +19,12 @@
     }
 }
 
+@keyframes pulse_animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
 html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -199,6 +205,30 @@ h3 {
     margin: 20px 0;
     padding: 10px 0;
     border-bottom: 1px solid black;
+}
+
+.Countdown__splash {
+    align-items: center;
+    background-color: #ffffff;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.Countdown__msg {
+    animation: 1.5s linear 1s infinite running pulse_animation;
 }
 
 @media (max-width: 1400px) {
