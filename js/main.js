@@ -32,3 +32,19 @@ onClick = function(e) {
 
 document.addEventListener('pointerlockchange', pointerLockChange);
 document.addEventListener('clicklink', onClick);
+
+// modifiers for aframe-copresence
+function buildVisitorRepr(id, el) {
+    var headEl = document.createElement('a-entity');
+    // in a-frame.html emojis are loaded as emoji_{0..6} (inclusive)
+    const choice = Math.floor(Math.random() * 7);
+    headEl.setAttribute('gltf-model', '#emoji_' + choice);
+    el.appendChild(headEl);
+}
+
+// // Add a fake user for debugging
+// window.addEventListener('load', () => {
+//     let el = createVisitorRepr('debug');
+//     el.setAttribute('position', {x: 0, y: 1.6, z: 0});
+//     console.log('Added debug visitor ', el);
+// });

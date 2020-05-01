@@ -62,4 +62,3 @@ AFRAME.registerComponent('hover', {
 
     }
   });
-
