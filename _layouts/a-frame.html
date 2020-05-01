@@ -72,6 +72,18 @@
         <button class="Exhibit__link" id="enter">LOADING</button>
       </div>
     </div>
+    <div id="controls" style="visibility: hidden;">
+      <p>express your f e e l i n g s</p>
+      <div id="emoji-selector">
+        <button id="emoji-selector-0" style="background-image: url(/assets/emoji_0.png)" onclick="changeEmoji(0);" class="selected"></button>
+        <button id="emoji-selector-1" style="background-image: url(/assets/emoji_1.png)" onclick="changeEmoji(1);"></button>
+        <button id="emoji-selector-2" style="background-image: url(/assets/emoji_2.png)" onclick="changeEmoji(2);"></button>
+        <button id="emoji-selector-3" style="background-image: url(/assets/emoji_3.png)" onclick="changeEmoji(3);"></button>
+        <button id="emoji-selector-4" style="background-image: url(/assets/emoji_4.png)" onclick="changeEmoji(4);"></button>
+        <button id="emoji-selector-5" style="background-image: url(/assets/emoji_5.png)" onclick="changeEmoji(5);"></button>
+        <button id="emoji-selector-6" style="background-image: url(/assets/emoji_6.png)" onclick="changeEmoji(6);"></button>
+      </div>
+    </div>
     {% include plithies.html %}
   </body>
   <script src={{'/js/main.js' | relative_url}}></script>

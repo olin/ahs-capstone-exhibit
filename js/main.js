@@ -33,13 +33,66 @@ onClick = function(e) {
 document.addEventListener('pointerlockchange', pointerLockChange);
 document.addEventListener('clicklink', onClick);
 
+const DEFAULT_EMOJI = 0;
+var selected_emoji = DEFAULT_EMOJI;
+
 // modifiers for aframe-copresence
 function buildVisitorRepr(id, el) {
     var headEl = document.createElement('a-entity');
+    headEl.class = 'head';
     // in a-frame.html emojis are loaded as emoji_{0..6} (inclusive)
-    const choice = Math.floor(Math.random() * 7);
-    headEl.setAttribute('gltf-model', '#emoji_' + choice);
+    // const choice = Math.floor(Math.random() * 7);
+    headEl.setAttribute('gltf-model', '#emoji_' + DEFAULT_EMOJI);
     el.appendChild(headEl);
+}
+
+
+// Change the client's emoji, sending updates to others
+function changeEmoji(emojiNum) {
+    if (!(emojiNum >=0 && emojiNum <= 6)) {
+        console.error('invalid emoji number');
+        return;
+    }
+    if (emojiNum == selected_emoji) {
+        return;
+    }
+    socket.emit('update-data', {
+        emoji: emojiNum,
+    });
+    const oldEmoji = document.getElementById('emoji-selector-' + selected_emoji);
+    const newEmoji = document.getElementById('emoji-selector-' + emojiNum);
+    oldEmoji.classList.remove('selected');
+    newEmoji.classList.add('selected');
+    selected_emoji = emojiNum;
+}
+
+// only show controls if socket.io managed to connect
+socket.on('connect', function () {
+    const controls = document.getElementById('controls');
+    controls.style.visibility = 'inherit';
+});
+
+socket.on('visitor-update-data', function (msg) {
+    const id = msg.id;
+    const data = msg.data;
+    handleVisitorUpdate(id, data);
+});
+
+function handleVisitorUpdate(id, data) {
+    const el = findVisitorRepr(id);
+    if (el == null) {
+        console.warn("Couldn't find user " + id);
+        return;
+    }
+    if (data.emoji != undefined) {
+        const emoji = data.emoji;
+        let headEl = el.getElementsByClassName('head')[0];
+        headEl.setAttribute('gltf-model', '#emoji_' + emoji);
+    }
+    if (data.name != undefined) {
+        const name = data.name;
+        // TODO
+    }
 }
 
 // // Add a fake user for debugging

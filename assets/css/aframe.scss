@@ -38,3 +38,26 @@ h2 {
     top: 0;
     z-index: 10000;
 }
+
+#controls {
+    font-family: 'Terminal Grotesque', Helvetica, Arial, sans-serif;
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+    z-index: 10001;
+    
+
+    #emoji-selector {
+        margin: 0 auto;
+        button {
+            width: 3em;
+            height: 3em;
+            background-size: contain;
+        }
+        button.selected {
+            border-color: black;
+            border-width: medium;
+        }
+    }
+}
