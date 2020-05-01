@@ -46,6 +46,7 @@ var countdown = setInterval(function() {
   if (distance < 0) {
     clearInterval(countdown);
     splash.style.opacity = 0;
+    splash.style.zIndex = -1;
     wrapper.style.display = "block";
   } else {
     splash.style.visibility = "visible";
