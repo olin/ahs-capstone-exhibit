@@ -2,7 +2,7 @@ var wrapper = document.getElementById("page-wrapper");
 var splash = document.getElementById("splash");
 var timer = document.getElementById("timer");
 
-var origDate = new Date("May 1, 2020 10:26:00");
+var origDate = new Date("May 1, 2020 19:00:00");
 
 function changeTimezone(date, ianatz) {
 
