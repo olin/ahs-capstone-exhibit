@@ -23,6 +23,7 @@
     <a-scene inspector-plugin-recast background="color: #FBB">
       <a-assets>
         <img id="skyTexture" src={{'/assets/bg.jpg' | relative_url}} />
+        <img id="sun" src="/assets/pmillitubby.png">
         <a-asset-item id="emoji_0" src="/assets/models/emoji_0.glb"></a-asset-item>
         <a-asset-item id="emoji_1" src="/assets/models/emoji_1.glb"></a-asset-item>
         <a-asset-item id="emoji_2" src="/assets/models/emoji_2.glb"></a-asset-item>
@@ -58,6 +59,7 @@
           ></a-image>
         </a-entity>
       </a-entity>
+      <a-image src="#sun" position="-8.11621 16.89594 -7.70673" material="" geometry="" rotation="-37.32820035277313 -82.80214167892119 -36.3610475945923" scale="20.14973 20.15 20.15"></a-image>
       <a-entity gltf-model={{'/assets/scene_navmesh.gltf' | relative_url}} nav-mesh visible="false"></a-entity>
       <a-image src={{'assets/thanks.jpg' | relative_url}} width="0.3" height="0.35" position="2.86 0.994 -0.495" rotation="0 45 0"></a-image>
       {% include project-pedestals.html %}
