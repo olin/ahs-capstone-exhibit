@@ -106,9 +106,9 @@ function handleVisitorUpdate(id, data) {
     }
 }
 
-// Add a fake user for debugging
-window.addEventListener('load', () => {
-    let el = createVisitorRepr('debug');
-    el.setAttribute('position', {x: 0, y: 1.6, z: 0});
-    console.log('Added debug visitor ', el);
-});
+// // Add a fake user for debugging
+// window.addEventListener('load', () => {
+//     let el = createVisitorRepr('debug');
+//     el.setAttribute('position', {x: 0, y: 1.6, z: 0});
+//     console.log('Added debug visitor ', el);
+// });
