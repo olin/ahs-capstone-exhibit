@@ -39,6 +39,7 @@ var selected_emoji = DEFAULT_EMOJI;
 // modifiers for aframe-copresence
 function buildVisitorRepr(id, el) {
     // const choice = Math.floor(Math.random() * 7);
+    el.setAttribute('shadow', {'receive': false});
     for (let i = 0; i < 7; i++) {
         var headEl = document.createElement('a-entity');
         headEl.className = 'head-' + i;
