@@ -38,12 +38,19 @@ var selected_emoji = DEFAULT_EMOJI;
 
 // modifiers for aframe-copresence
 function buildVisitorRepr(id, el) {
-    var headEl = document.createElement('a-entity');
-    headEl.class = 'head';
-    // in a-frame.html emojis are loaded as emoji_{0..6} (inclusive)
     // const choice = Math.floor(Math.random() * 7);
-    headEl.setAttribute('gltf-model', '#emoji_' + DEFAULT_EMOJI);
-    el.appendChild(headEl);
+    for (let i = 0; i < 7; i++) {
+        var headEl = document.createElement('a-entity');
+        headEl.className = 'head-' + i;
+        if (i == DEFAULT_EMOJI) {
+            headEl.setAttribute('visible', true);
+        } else {
+            headEl.setAttribute('visible', false);
+        }
+        // in a-frame.html emojis are loaded as emoji_{0..6} (inclusive)
+        headEl.setAttribute('gltf-model', '#emoji_' + i);
+        el.appendChild(headEl);
+    }
 }
 
 
@@ -86,8 +93,11 @@ function handleVisitorUpdate(id, data) {
     }
     if (data.emoji != undefined) {
         const emoji = data.emoji;
-        let headEl = el.getElementsByClassName('head')[0];
-        headEl.setAttribute('gltf-model', '#emoji_' + emoji);
+        el.childNodes.forEach(function (c) {
+            c.setAttribute('visible', false);
+        })
+        let newHeadEl = el.getElementsByClassName('head-' + emoji)[0];
+        newHeadEl.setAttribute('visible', true);
     }
     if (data.name != undefined) {
         const name = data.name;
@@ -95,9 +105,9 @@ function handleVisitorUpdate(id, data) {
     }
 }
 
-// // Add a fake user for debugging
-// window.addEventListener('load', () => {
-//     let el = createVisitorRepr('debug');
-//     el.setAttribute('position', {x: 0, y: 1.6, z: 0});
-//     console.log('Added debug visitor ', el);
-// });
+// Add a fake user for debugging
+window.addEventListener('load', () => {
+    let el = createVisitorRepr('debug');
+    el.setAttribute('position', {x: 0, y: 1.6, z: 0});
+    console.log('Added debug visitor ', el);
+});
