@@ -6,7 +6,6 @@ description: This project is a culmination of my studies in cello performance ov
 img: assets/cello.png
 pos: '"-8.759 .6 -16.092"'
 rotation: '"0 45 0"'
-zoom: https://olin.zoom.us/j/93213150694
 ---
 The Bach Suites for Unaccompanied Cello are often recognized as the most prolific set piece
 for cello, with even the most skilled cellists calling them the Mt. Everest of cello playing. Apart

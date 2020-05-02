@@ -6,7 +6,6 @@ description: This semester, I had planned to analyze educational discourse as it
 img: assets/crit.jpg
 pos: '"-4.580 .6 -19.431"'
 rotation: '"0 45 0"'
-zoom: https://olin.zoom.us/j/91688238857
 ---
 
 *Throughout this document, I have attached “comments” to various words and phrases. These comments are excerpted from written reflections I recorded over the past six months of working on this project, and are intended to showcase how my shifting thinking influenced the development of this project over the course of its lifespan. You can click on a piece of highlighted text to see which comments are connected to which phrases.*

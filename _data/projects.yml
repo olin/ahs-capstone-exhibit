@@ -13,7 +13,6 @@
   img: assets/slc.jpg
   pos: '"-1.4 .6 -6.4"'
   rotation: '"0 45 0"'
-  zoom: https://olin.zoom.us/j/843306954
 
 - author: Kai Loewenstein
   title: Globsters - A Visual Novel
@@ -30,7 +29,6 @@
   img: assets/one.png
   pos: '"-4.499 .6 -7.142"'
   rotation: '"0 45 0"'  
-  zoom: https://olin.zoom.us/j/92456965213
 
 - author: Miranda Lao
   title: red string
@@ -47,7 +45,6 @@
   img: assets/olin.jpg
   pos: '"7.096 .6 -19.121"'
   rotation: '"0 45 0"' 
-  zoom: https://olin.zoom.us/j/96252440299?pwd=WjluU2pBcitQMWVOSzFxbVl5UWw4dz09
 
 - author: Tobias Shapinsky
   title: In a Different Light
@@ -56,7 +53,6 @@
   img: assets/infra.jpg
   pos: '"4.017 .6 -19.671"'
   rotation: '"0 45 0"' 
-  zoom: https://olin.zoom.us/j/92158126668?pwd=c3d4ZG0yMGFhSktpL3VRajV4MzNOUT09
 
 - author: Annie Kroo
   title: Value Alignment in Change Initiatives
@@ -65,7 +61,6 @@
   img: assets/value.png
   pos: '"1.994 .6 -19.671"'
   rotation: '"0 45 0"'
-  zoom: https://olin.zoom.us/j/93155021491
 
 - author: Gretchen Rice
   title: A Glimpse
@@ -74,7 +69,6 @@
   img: assets/glimpse.jpg
   pos: '"-0.099 .6 -19.671"'
   rotation: '"0 45 0"'
-  zoom: https://olin.zoom.us/j/98847738013 
 
 - author: Henry Rachootin
   title: Mana Potion
@@ -91,7 +85,6 @@
   img: assets/politics.png
   pos: '"-8.759 .6 -19.431"'
   rotation: '"0 45 0"'
-  zoom: https://olin.zoom.us/j/96357487302
 
 - author: Evan Lloyd New-Schmidt
   title: Large Format Film Photography
@@ -100,7 +93,6 @@
   img: assets/large.jpg
   pos: '"2.549 .6 -0.609"'
   rotation: '"0 45 0"'
-  zoom: https://olin.zoom.us/j/99076626043
 
 - author: Jeremy Ryan
   title: From Puente to Chopin - Musical Exploration and Composition
@@ -109,7 +101,6 @@
   img: assets/piano.png
   pos: '"2.261 .6 -12.507"'
   rotation: '"0 45 0"'
-  zoom: https://olin.zoom.us/j/5822832807
 
 
 
